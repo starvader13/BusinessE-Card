@@ -10,6 +10,7 @@ const connectDatabase = async ()=>{
         await mongoose.connect(`${databaseConnectionString}/${databaseName}`);
         console.log("Database Connected Successfully");
         return {
+            origin: "dbConnection",
             status: true,
             msg: "Database Connected Successfully",
             timestamp: Date()
@@ -17,6 +18,7 @@ const connectDatabase = async ()=>{
     }catch(error) {
         console.log("Database Connection Failed");
         return{
+            origin: "dbConnection",
             status: false,
             msg: "Database Connection Failed",
             timestamp: Date(),
