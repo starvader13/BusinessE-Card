@@ -5,13 +5,15 @@ dotenv.config();
 import startDatabase from "./utils/startDatabase.js";
 import bodyParser from "body-parser";
 import signRoutes from "./routes/signRoutes.js";
+import cardRoutes from "./routes/cardRoute.js";
 
 const app = express();
 const port = process.env.PORT || 7000;
 
 app.use(bodyParser.json());
 
-app.use("/api", signRoutes.route)
+app.use("/api", signRoutes.route);
+app.use("/api", cardRoutes.route);
 
 app.use(cors({
     origin: "http://localhost:5173/"

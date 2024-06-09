@@ -14,6 +14,9 @@ const logger = async (jsonData={})=>{
     else if(jsonData.origin==="sign"){
         filename = path.join(__dirname, "../logs/signFailed.txt");
     }
+    else if(jsonData.origin==="card"){
+        filename = path.join(__dirname, "../logs/cardAuthorizationFailed.txt")
+    }
     else{
         return null;
     }

@@ -1,2 +1,6 @@
 
 {"origin":"dbConnection","status":false,"msg":"Database Connection Failed","timestamp":"Thu Jun 06 2024 10:31:23 GMT+0530 (India Standard Time)","error":"connection timed out"}
+{"origin":"dbConnection","status":false,"msg":"Database Connection Failed","timestamp":"Sun Jun 09 2024 11:26:55 GMT+0530 (India Standard Time)","error":"querySrv ESERVFAIL _mongodb._tcp.cluster0.s7pwrdc.mongodb.net"}
+{"origin":"dbConnection","status":false,"msg":"Database Connection Failed","timestamp":"Sun Jun 09 2024 11:27:00 GMT+0530 (India Standard Time)","error":"querySrv ESERVFAIL _mongodb._tcp.cluster0.s7pwrdc.mongodb.net"}
+{"origin":"dbConnection","status":false,"msg":"Database Connection Failed","timestamp":"Sun Jun 09 2024 11:28:55 GMT+0530 (India Standard Time)","error":"querySrv ESERVFAIL _mongodb._tcp.cluster0.s7pwrdc.mongodb.net"}
+{"origin":"dbConnection","status":false,"msg":"Database Connection Failed","timestamp":"Sun Jun 09 2024 11:47:10 GMT+0530 (India Standard Time)","error":"querySrv ESERVFAIL _mongodb._tcp.cluster0.s7pwrdc.mongodb.net"}
