@@ -4,6 +4,6 @@
 
 @layer components {
     .nav-text {
-        @apply cursor-pointer p-1 hover:text-xl hover:text-blue-400 hover:font-semibold text-gray-500 font-bold hover:rotate-12 hover:underline hover:underline-offset-4
+        @apply cursor-pointer p-1 hover:text-xl hover:text-blue-400 hover:font-semibold text-gray-600 font-bold hover:rotate-12 hover:underline hover:underline-offset-4
     }
 }

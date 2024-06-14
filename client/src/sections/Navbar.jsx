@@ -11,15 +11,15 @@ const Navbar = () => {
                 <div className={"flex justify-between items-center w-[25%] gap-[10px] pl-6"}>
                     <li className={"nav-text"} onClick={()=>navigate("/")}>Home</li>
                     <li className={"nav-text"} onClick={()=>navigate("/create-card")}>Create </li>
-                    <li className={"nav-text"} onClick={()=>navigate("/all-card")}>Cards </li>
+                    <li className={"nav-text"} onClick={()=>navigate("/cards")}>Cards </li>
                     <li className={"nav-text"} onClick={()=>navigate("update-card/")}>Update </li>
                     <li className={"nav-text"} onClick={()=>navigate("/delete-card")}>Delete </li>
                 </div>
                 <div className={"flex justify-between items-center w-[25%] xl:w-[22%] pr-6"}>
-                    <li className={"nav-text"} onClick={()=>navigate("/sign-up")}>SignUp</li>
-                    <li className={"nav-text"} onClick={()=>navigate("/log-in")}>LogIn</li>
-                    <li className={"nav-text"} onClick={()=>navigate("/profile")}>Profile</li>
-                    <li className={"nav-text"} onClick={()=>navigate("/logout")}>Logout</li>
+                    <li className={"nav-text"} onClick={()=>navigate("/sign-up")}>Signup</li>
+                    <li className={"nav-text"} onClick={()=>navigate("/log-in")}>Login</li>
+                    <li className={"nav-text"} >Profile</li>
+                    <li className={"nav-text"} >Logout</li>
                 </div>
             </ul>
         </div>
@@ -30,9 +30,9 @@ const Navbar = () => {
                 <div className={"nav-text"} onClick={() => navigate("/")}>Home</div>
                 <div className={"flex justify-between items-center"}>
                     <ul className={"flex justify-between items-center w-[30%] pr-6 gap-[10px]"}>
-                        <li className={"nav-text"} onClick={() => navigate("/sign-up")}>SignUp</li>
-                        <li className={"nav-text"} onClick={() => navigate("/log-in")}>LogIn</li>
-                        <li className={"nav-text"} onClick={() => navigate("/profile")}>Profile</li>
+                        <li className={"nav-text"} onClick={() => navigate("/sign-up")}>Signup</li>
+                        <li className={"nav-text"} >Login</li>
+                        <li className={"nav-text"} >Profile</li>
                         <li className={"nav-text"} >Logout</li>
                     </ul>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
@@ -47,7 +47,7 @@ const Navbar = () => {
                 transition ?
                     <ul className={"flex flex-col text-center justify-between px-3 py-2 font-lato  text-lg leading-7 duration-700 transition-all"}>
                         <li className={"nav-text"} onClick={() => navigate("/create-card")}>Create </li>
-                        <li className={"nav-text"} onClick={() => navigate("/all-card")}>Cards </li>
+                        <li className={"nav-text"} onClick={() => navigate("/cards")}>Cards </li>
                         <li className={"nav-text"} onClick={() => navigate("update-card/")}>Update </li>
                         <li className={"nav-text"} onClick={() => navigate("/delete-card")}>Delete </li>
                     </ul> : null
