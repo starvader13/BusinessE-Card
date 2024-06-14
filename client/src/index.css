@@ -7,3 +7,9 @@
         @apply cursor-pointer p-1 hover:text-xl hover:text-blue-400 hover:font-semibold text-gray-600 font-bold hover:rotate-12 hover:underline hover:underline-offset-4
     }
 }
+
+@layer components {
+    .footer-text {
+        @apply cursor-pointer hover:animate-pulse hover:underline hover:underline-offset-2 flex gap-1 items-center
+    }
+}
