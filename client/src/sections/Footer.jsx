@@ -39,7 +39,7 @@ const Footer = () => {
                     </li></a>
                 </ul>
             </div>
-            <div className={"flex flex-col justify-start"}>
+            <div className={"flex flex-col justify-start bottom-0 "}>
                 <div className={"text-md lg:text-xl pb-4"}>Project <span className={"max-md:hidden"}>Details</span></div>
                 <ul className={"text-sm lg:text-md font-medium"}>
                     <li className={"footer-text"} onClick={()=>navigate("/")}>
