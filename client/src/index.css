@@ -12,7 +12,7 @@
     }
 
     .input-text {
-        @apply border-2 p-4 rounded-xl w-[20%]
+        @apply border-2 p-4 rounded-xl w-[40%]
     }
 
     .input-div {

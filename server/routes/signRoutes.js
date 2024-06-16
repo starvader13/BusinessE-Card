@@ -11,7 +11,7 @@ import dotenv from "dotenv";
 dotenv.config()
 
 const route = Router();
-const secretKey = process.env.JWT_SECRET_KEY
+const secretKey = process.env.JWT_SECRET_KEY;
 
 route.post("/signup", parameterValidator, emailPasswordValidator, usernameValidator, checkUserDoesNotExists, async (req, res)=>{
     const body = req.body;

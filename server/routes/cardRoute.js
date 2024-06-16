@@ -5,7 +5,6 @@ import Card from "../models/cardModel.js";
 import maxCardLimit from "../middlewares/maxCardLimit.js";
 import cardExists from "../middlewares/cardExists.js";
 import updateCardDetailsValidator from "../middlewares/updateCardDetailsValidator.js";
-import checkUserExists from "../middlewares/checkUserExists.js";
 import jwt from "jsonwebtoken";
 import User from "../models/userModel.js";
 
