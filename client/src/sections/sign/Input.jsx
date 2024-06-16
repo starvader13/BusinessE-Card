@@ -21,6 +21,7 @@ const Input = ({signUp=false, buttonContent="", onSubmit}) => {
             setTimeout(()=>{
                 signUp ? setSignUpResponse("") : setSignInResponse("");
                 navigate("/");
+                location.reload();
             }, 1000)
         }
     }
@@ -47,6 +48,14 @@ const Input = ({signUp=false, buttonContent="", onSubmit}) => {
         </div>
 
         <input className={"border-2 py-3 px-6 bg-gradient-to-br from-yellow-700 to-grey-600 text-2xl rounded-xl font-bold font-serif border-none hover:ring-2 hover:ring-gray-400 cursor-pointer active:(bg-gradient-to-br active:from-yellow-900 active:to-grey-100)"} type="submit" value={buttonContent}/>
+        {
+            signUp ? <div className={"m-2 text-xl font-medium "}>
+                Already registered ? <span onClick={()=>navigate("/log-in")} className={"text-blue-600 underline cursor-pointer text-lg"}>LogIn</span>
+            </div> :
+                <div className={"m-2 text-xl font-medium "}>
+                    Not registered ? <span onClick={() => navigate("/sign-up")} className={"text-blue-600 underline cursor-pointer text-lg"}>Create New Account</span>
+                </div>
+        }
     </form>
 };
 

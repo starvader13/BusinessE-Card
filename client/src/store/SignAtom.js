@@ -13,6 +13,6 @@ export const signInResponseAtom = atom({
 export const signedAtom = selector({
     key: "signedAtom",
     get: ()=>{
-        return !!window.localStorage.getItem("authentication")
+        return !!window.localStorage.getItem("authorization")
     }
 })

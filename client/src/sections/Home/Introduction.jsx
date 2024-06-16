@@ -11,7 +11,7 @@ const Introduction = () => {
                 </button>
             </div>
             <div className={"border-2 bg-white shadow-lg p-6 rounded-xl"}>
-                <img src="/src/assets/img.png" alt="Card" width={850}/>
+                <img src="/public/img.png" alt="Card" width={850}/>
             </div>
         </div>
     );

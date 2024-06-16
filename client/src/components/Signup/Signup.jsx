@@ -17,7 +17,7 @@ const Signup = () => {
                 </div>
 
                 <div className={"col-span-2"}>
-                    <img src="/src/assets/dilliwali-namaste-ji.gif" alt="Welcome"/>
+                    <img src="/public/dilliwali-namaste-ji.gif" alt="Welcome"/>
                 </div>
             </div>
         </div>

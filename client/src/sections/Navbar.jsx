@@ -1,9 +1,19 @@
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
+import {useRecoilValue} from "recoil";
+import {signedAtom} from "../store/SignAtom.js";
 
 const Navbar = () => {
     const navigate = useNavigate();
     const [transition, setTransition] = useState(false);
+    const signed = useRecoilValue(signedAtom);
+
+    const logout = () => {
+        localStorage.removeItem("authorization");
+        localStorage.removeItem("user");
+        navigate("/");
+        location.reload();
+    }
 
     return<section className={"my-4 mx-4 text-center"}>
         <div className={"hidden lg:block"}>
@@ -15,12 +25,17 @@ const Navbar = () => {
                     <li className={"nav-text"} onClick={()=>navigate("update-card/")}>Update </li>
                     <li className={"nav-text"} onClick={()=>navigate("/delete-card")}>Delete </li>
                 </div>
-                <div className={"flex justify-between items-center w-[25%] xl:w-[22%] pr-6"}>
-                    <li className={"nav-text"} onClick={()=>navigate("/sign-up")}>Signup</li>
-                    <li className={"nav-text"} onClick={()=>navigate("/log-in")}>Login</li>
-                    <li className={"nav-text"} >Profile</li>
-                    <li className={"nav-text"} >Logout</li>
-                </div>
+                {
+                    signed ?
+                        <div className={"flex justify-end items-center w-[13%] xl:w-[10%] gap-12 pr-6"}>
+                            <li className={"nav-text capitalize"}>{localStorage.getItem('user')}</li>
+                            <li className={"nav-text"} onClick={logout}>Logout</li>
+                        </div> :
+                        <div className={"flex justify-end items-center w-[13%] xl:w-[10%] gap-12 pr-6"}>
+                            <li className={"nav-text"} onClick={() => navigate("/sign-up")}>Signup</li>
+                            <li className={"nav-text"} onClick={() => navigate("/log-in")}>Login</li>
+                        </div>
+                }
             </ul>
         </div>
 
@@ -29,11 +44,17 @@ const Navbar = () => {
                 className={"flex justify-between items-center w-full bg-white  px-3 py-2 font-lato  text-lg leading-7 h-10 "}>
                 <div className={"nav-text"} onClick={() => navigate("/")}>Home</div>
                 <div className={"flex justify-between items-center"}>
-                    <ul className={"flex justify-between items-center w-[30%] pr-6 gap-[10px]"}>
-                        <li className={"nav-text"} onClick={() => navigate("/sign-up")}>Signup</li>
-                        <li className={"nav-text"} >Login</li>
-                        <li className={"nav-text"} >Profile</li>
-                        <li className={"nav-text"} >Logout</li>
+                    <ul className={"flex justify-between items-center w-[15%] pr-6 gap-[10px]"}>
+                        {
+                            signed ? <>
+                                <li className={"nav-text"} onClick={() => navigate("/sign-up")}>Signup</li>
+                                <li className={"nav-text"} onClick={() => navigate("/log-in")}>Login</li>
+                            </> : <>
+                                <li className={"nav-text"}>Profile</li>
+                                <li className={"nav-text"} onClick={logout}>Logout</li>
+                            </>
+                        }
+
                     </ul>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                          stroke="currentColor" className="size-6 cursor-pointer hover:rotate-12 "
