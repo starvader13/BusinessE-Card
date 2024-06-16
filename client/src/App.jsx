@@ -4,6 +4,7 @@ import CustomRoutes from "./utils/CustomRoutes.js";
 import {Suspense} from "react";
 import Footer from "./sections/Footer.jsx";
 import {RecoilRoot} from "recoil";
+import SuspenseLoading from "./sections/SuspenseLoading.jsx";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
                     {
                         CustomRoutes.map((CustomRoute, index) => {
                             return <Route key={index} path={CustomRoute.path}
-                                          element={<Suspense fallback={"loading..."}><CustomRoute.element/></Suspense>}/>
+                                          element={<Suspense fallback={<SuspenseLoading />}><CustomRoute.element/></Suspense>}/>
                         })
                     }
                 </Routes>

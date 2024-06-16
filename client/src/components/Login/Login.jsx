@@ -18,7 +18,7 @@ const Login = () => {
                 </div>
 
                 <div className={"col-span-2 "}>
-                    <img src="/public/welcome.webp" alt="Welcome back" className={"border-none rounded-2xl"}/>
+                    <img src="welcome.webp" alt="Welcome back" className={"border-none rounded-2xl"}/>
                 </div>
             </div>
         </div>
