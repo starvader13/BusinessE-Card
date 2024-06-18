@@ -2,6 +2,7 @@ import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import {useRecoilValue} from "recoil";
 import {signedAtom} from "../store/SignAtom.js";
+import logo from "../../public/logo.svg";
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -19,11 +20,12 @@ const Navbar = () => {
         <div className={"hidden lg:block"}>
             <ul className={"flex justify-between items-center w-full bg-white border-2 shadow-2xl shadow-cyan-100 px-2 py-2 font-lato rounded-lg text-lg leading-7"}>
                 <div className={"flex justify-between items-center w-[25%] gap-[10px] pl-6"}>
-                    <li className={"nav-text"} onClick={()=>navigate("/")}>Home</li>
-                    <li className={"nav-text"} onClick={()=>navigate("/create-card")}>Create </li>
-                    <li className={"nav-text"} onClick={()=>navigate("/cards")}>Cards </li>
-                    <li className={"nav-text"} onClick={()=>navigate("update-card/")}>Update </li>
-                    <li className={"nav-text"} onClick={()=>navigate("/delete-card")}>Delete </li>
+                    <li><img src={logo} alt="Home" onClick={() => navigate("/")} className={"cursor-pointer"}/></li>
+                    {/*<li className={"nav-text"} onClick={()=>navigate("/")}>Home</li>*/}
+                    <li className={"nav-text"} onClick={() => navigate("/create-card")}>Create</li>
+                    <li className={"nav-text"} onClick={() => navigate("/cards")}>Cards</li>
+                    <li className={"nav-text"} onClick={() => navigate("update-card/")}>Update</li>
+                    <li className={"nav-text"} onClick={() => navigate("/delete-card")}>Delete</li>
                 </div>
                 {
                     signed ?
