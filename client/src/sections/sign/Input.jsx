@@ -30,16 +30,14 @@ const Input = ({signUp=false, buttonContent="", onSubmit}) => {
         {
             signUp ?
                 <div className={"input-div"}>
-                    <input {...register("username", {required: "Username is required."})} placeholder={"Username"}
-                       className={"input-text"}/>
+                    <input {...register("username", {required: "Username is required."})} placeholder={"Username"} className={"input-text"}/>
                     <div className={"input-error-message"}>{errors.username?.message}</div>
                 </div> : null
         }
 
         <div className={"input-div"}>
-            <input {...register("email", {required: "Email is required."})} placeholder={"Email"}
-                   className={"input-text"}/>
-            <div className={"input-error-message"}>{errors.email?.message}</div>
+            <input {...register("email", {required: "Email is required."})} placeholder={"Email"} className={"input-text"}/>
+            <div className={"input-error-message "}>{errors.email?.message}</div>
         </div>
 
         <div className={"input-div"}>

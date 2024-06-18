@@ -11,8 +11,12 @@ export default {
       },
       animation:{
         bounceOnce: "bounce 2s linear 1",
-        pingOnce: "ping 2s linear 1"
+        pingOnce: "ping 2s linear 1",
+        spinOnce: "spin 2s linear 1",
       },
+      backgroundImage: {
+        card: "url('background-card.webp')",
+      }
     },
   },
   plugins: [],
