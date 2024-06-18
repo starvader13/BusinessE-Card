@@ -20,6 +20,16 @@ const cardSchema = new mongoose.Schema({
         type: [String],
         default: []
     },
+    linkedin: {
+        type: String,
+        trim: true,
+        required: true
+    },
+    twitter: {
+        type: String,
+        trim: true,
+        required: true
+    },
     userId: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',
