@@ -14,7 +14,7 @@ const Template = ({name, description, hobbies, linkedin, twitter, url}) => {
             name || description || (hobbiesArray.length !==0 && hobbiesArray[0] !== "") || linkedin || twitter || url ? 
                 null : <div className={"flex justify-center items-center flex-col "}>
                     <div className={"p-8 text-5xl font-bold text-gray-500"}>Sneak Peek: Start Filling Card Details</div>
-                    <img src="sneak-peek.gif" alt="Sneak Peek" className={"rounded-2xl border-4 border-violet-200 hover:animate-pulse mt-8"} width={480}/>
+                    <img src="/sneak-peek.gif" alt="Sneak Peek" className={"rounded-2xl border-4 border-violet-200 hover:animate-pulse mt-8"} width={480}/>
                 </div>
         }
         
@@ -42,10 +42,10 @@ const Template = ({name, description, hobbies, linkedin, twitter, url}) => {
                         <div
                             className={"text-2xl font-mono font-bold text-gray-600 tracking-tighter rounded-md bg-gray-50 p-2 pt-3 bg-gradient-to-b from-fuchsia-300 to-gray-400 hover:ring-white hover:ring"}>Talk To Me About :
                         </div>
-                        <ol className={"animate-spinOnce"}>
+                        <ol className={"animate-pulseFive"}>
                             {
                                 hobbiesArray.map((hobby, index) => {
-                                    return <li key={index} className={"text-3xl pl-8 pb-2 text-transparent bg-gradient-to-t from-gray-700 to-red-600 bg-clip-text font-semibold uppercase hover:animate-bounce"}>
+                                    return <li key={index} className={"text-3xl pl-8 pt-3 text-transparent bg-gradient-to-t from-gray-700 to-red-600 bg-clip-text font-semibold uppercase hover:animate-bounce"}>
                                         - {hobby}
                                     </li>
                                 })

@@ -2,7 +2,7 @@ import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import {useRecoilValue} from "recoil";
 import {signedAtom} from "../store/SignAtom.js";
-import logo from "../../public/logo.svg";
+import logo from "/logo.svg";
 
 const Navbar = () => {
     const navigate = useNavigate();
